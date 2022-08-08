@@ -1,0 +1,27 @@
+.container-order{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 12px;
+   
+}
+
+.container-order li{
+    list-style: none;
+    color:#C7AB86;
+}
+
+.btn-order{
+    background-color: #3185B1;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 12px;
+}
+
+.container{
+    margin: 5px;
+    padding: 10px;
+   
+}

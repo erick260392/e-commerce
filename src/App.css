@@ -1,0 +1,46 @@
+:root{
+  --primary-color:hsl(214, 84%, 56%);
+  --text-color:hsl(0, 0%, 31%);
+  --bg-color:hsl(0, 0%, 90%);
+  --bg-card-color:hsl(0, 0%, 98%);
+  --transition: color 10s, background-color 1s ease-in-out;
+  --border-radius:0.4em;
+  --skills-bar-lenght:0%;
+
+}
+
+
+body{
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  font-family: sans-serif;
+
+  }
+
+
+body.dark{
+  color:hsl(0, 0%, 83%);
+  background-color:hsl(0, 0%, 15%);
+ transition: var(--transition);
+
+}
+
+.toogle-theme__icon{
+  margin-right: .5em;
+  width: 40px;
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+
+
+  
+}
+
+.btn_darkmode{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+

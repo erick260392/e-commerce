@@ -1,0 +1,89 @@
+:root {
+     --primary-color:#FFDBC6;
+     --text-color: hsl(0, 0%, 31%);
+     --bg-color: hsl(0, 0%, 90%);
+     --bg-card-color: hsl(0, 0%, 98%);
+     --transition: color .5s, background-color .8s ease-in-out;
+     --border-radius: 0.4em;
+     --skills-bar-lenght: 0%;
+
+}
+
+
+
+
+#categories {
+     display: flex;
+     width: 300px;
+     align-items: center;
+     justify-content: center;
+     margin: 5px;
+     text-align: center;
+     border-radius: 12px;
+}
+
+#categories:hover {
+     transition: var(--transition);
+     background-color: var(--primary-color);
+}
+
+
+.card_categories {
+     display: flex;
+     border-radius: 12px;
+     border: solid coral;
+     flex-direction: column;
+     align-items: center;
+     background-color: var(--bg-card-color);
+     height: fit-content;
+}
+
+.card_products{
+     border: solid var(--primary-color);
+     border-radius: 12px;
+     display: flex;
+     padding: 30px;
+     align-items: center;
+     justify-items: center;
+  
+}
+
+#card-home{
+   
+   background-color: #F5F5F5;
+}
+
+.mb-3{
+     border: solid var(--primary-color);
+    border-radius: 12px;
+}
+
+.page-item{
+     color: var(--primary-color);
+     border-radius: 12px;
+}
+
+
+
+.text-price{
+     font-size: small;
+}
+
+.btn-home{
+     text-align: center;
+     font-size: small;
+     height: fit-content;
+     width: fit-content;
+     border-radius: 12px;
+     background-color: var(--primary-color);
+     transition: var(--transition);
+}
+
+.btn-home:hover{
+    color:rebeccapurple;
+    background-color: #3185B1;
+}
+
+.text-title-home{
+    font-size: 10px;
+}
