@@ -42,8 +42,6 @@ const ProductDetail = () => {
 
 
 
-  console.log(ProductsDetail)
-  console.log(SuggestedProducts)
 
  
   return (

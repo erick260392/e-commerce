@@ -1,12 +1,13 @@
 
 import './App.css'
 import { HashRouter, Route, Routes } from 'react-router-dom'
-import { NavBar, LoadingScrean } from './componets'
+import { NavBar, LoadingScrean, ProtectedRoutes } from './componets'
 import { Home, Login, ProductDetail, Purchaches } from './pages'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import moon from './assets/icons/moon.svg'
 import sun from './assets/icons/sun.svg'
+
 
 
 function App() {
@@ -53,7 +54,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/Purchaches' element={<Purchaches />} />
+          <Route element={<ProtectedRoutes/>}>
+            <Route path='/Purchaches' element={<Purchaches />} />
+          </Route>
           <Route path='/Products/:id' element={<ProductDetail />} />
         </Routes>
 
