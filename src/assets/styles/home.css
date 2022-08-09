@@ -1,15 +1,14 @@
+
 :root {
-     --primary-color: #FFDBC6;
+     --primary-color:#E8EFF0;
      --text-color: hsl(0, 0%, 31%);
-     --bg-color: hsl(0, 0%, 90%);
-     --bg-card-color: hsl(0, 0%, 98%);
-     --transition: color .5s, background-color .8s ease-in-out;
+     --bg-color: #C5D1D8;
+     --bg-card-color: #A9B2C1;
+     --transition: color .5s, background-color .5s ease-in-out;
      --border-radius: 0.4em;
      --skills-bar-lenght: 0%;
-
-}
-
-
+ 
+ }
 
 
 #categories {
@@ -39,17 +38,21 @@
 }
 
 .card_products {
-
+     background-color: var(--bg-color);
+     border-radius: 12px;
      display: flex;
-     padding: 30px;
+     padding: 8px;
      align-items: center;
      justify-items: center;
 
 }
 
 #card-home {
-
+     padding: 5px;
+     border-radius: 12px;
      background-color: #F5F5F5;
+     height: fit-content;
+     width: fit-content;
 }
 
 
@@ -57,7 +60,7 @@
 
 
 .text-price {
-     font-size: small;
+     font-size: x-large;
 }
 
 .btn-home {
@@ -71,8 +74,8 @@
 }
 
 .btn-home:hover {
-     color: rebeccapurple;
-     background-color: #3185B1;
+     color: var(--text-color);
+     background-color: var(--bg-card-color)
 }
 
 .text-title-home {

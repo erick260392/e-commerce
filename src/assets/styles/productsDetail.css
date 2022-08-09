@@ -1,9 +1,9 @@
 
 :root {
-    --primary-color:#FFDBC6;
+    --primary-color:#E8EFF0;
     --text-color: hsl(0, 0%, 31%);
-    --bg-color: hsl(0, 0%, 90%);
-    --bg-card-color: hsl(0, 0%, 98%);
+    --bg-color: #C5D1D8;
+    --bg-card-color: #A9B2C1;
     --transition: color .5s, background-color .8s ease-in-out;
     --border-radius: 0.4em;
     --skills-bar-lenght: 0%;
@@ -13,25 +13,35 @@
 .card-similar{
 display: flex;
 border-radius: 12px;
-background-color:var(--bg-card-color);
+background-color:var(--primary-color);
 align-items: center;
 justify-content: center;
-margin: 20px;
-flex-wrap: wrap;
 height: fit-content;
 width: fit-content;
 
+
+
+}
+
+
+@media screen and (max-width: 850px)  {
+    .card-similar{
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+    
 }
 
 .container-similar{
     display: flex;
     flex-direction: column;
-   background-color: var(--bg-card-color);
+    background-color: var(--bg-color);
     border-radius: 12px;
     height:400px;
     width: 400px;
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
     align-self: center;
     justify-content: center;
 
@@ -47,11 +57,25 @@ width: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: var(--primary-color);
     border-radius: 12px;
+   
 }
 
 .col-12{
  align-self: center;
 justify-content: center;
+}
+
+.container-suggested{
+    display: flex;
+     margin: 10px;
+    flex-wrap: wrap;
+    border: 1px solid #A9B2C1;
+}
+
+.carousel-inner{
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 8px;
 }

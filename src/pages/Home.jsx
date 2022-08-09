@@ -140,7 +140,7 @@ const Home = () => {
                                             <Card.Body >
                                                 <Card.Title className='text-title-home'>{product.title}</Card.Title>
                                                 <Card.Text>
-                                                    <h4 className='text-price'>${product.price}</h4>
+                                                    <h2 className='text-price'>${product.price}</h2>
                                                 </Card.Text>
                                                 <button className='btn-home' onClick={() => navigate(`/products/${product.id}`)} >PRODUCT DETAIL</button>
                                             </Card.Body>

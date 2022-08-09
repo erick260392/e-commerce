@@ -47,21 +47,21 @@ const ProductDetail = () => {
 
  
   return (
-    <div className='container' style={{ maxHeight: '650px' }} >
+    <div className='container-detail' style={{ maxHeight: '650px' }} >
       <div className="container">
         <div className="row">
           <div className="col-12   col-sm-6  col-md-6  ">
             <Carousel activeIndex={index} onSelect={handleSelect}>
-              <Carousel.Item>
+              <Carousel.Item className= "image-product" >
                 <img
                   style={{ maxHeight: '350px' }}
-                  className="d-block w-150"
+                  className=".d-block w-150 image-product"
                   src={ProductsDetail?.productImgs?.[0]}
 
                 />
 
               </Carousel.Item>
-              <Carousel.Item>
+              <Carousel.Item className= "image-product" >
                 <img
                   style={{ maxHeight: '350px' }}
                   className="d-block w-150"
@@ -69,7 +69,7 @@ const ProductDetail = () => {
                 />
 
               </Carousel.Item>
-              <Carousel.Item>
+              <Carousel.Item className= "image-product" >
                 <img
                   style={{ maxHeight: '350px' }}
                   className="d-block w-150"
@@ -98,8 +98,8 @@ const ProductDetail = () => {
 
       </div>
         <h2>SuggestedProducts</h2>
-
-      <div className='card-similar'>
+<div className='container'>
+<div className='card-similar'>
         {
     SuggestedProducts.map(products => (
   
@@ -107,7 +107,7 @@ const ProductDetail = () => {
           onClick={()=> navigate(  `/Products/${products.id}`)}
           >
            
-        <img style={{ maxHeight: '250px' }} src={products?.productImgs?.[0]} alt="" />
+        <img  style={{ maxHeight: '250px' }} src={products?.productImgs?.[0]} alt="" />
 
 <div className='contaner-text'>
   <h6>{products.title}</h6>
@@ -121,6 +121,8 @@ const ProductDetail = () => {
 
     ))
   }
+</div>
+     
       </div>
     </div>
 
