@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Carousel, ListGroup } from 'react-bootstrap';
+import { Button, Carousel, Form, ListGroup } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { useNavigate, useParams } from 'react-router';
-import { getProductsthunk } from '../store/slices/products.slice';
+import { addProductsthunk, getProductsthunk } from '../store/slices/products.slice';
 import '../assets/styles/productsDetail.css'
+
 
 const ProductDetail = () => {
 
 
   const [ProductsDetail, setProductsDetail] = useState({})
   const [SuggestedProducts, setSuggestedProducts] = useState([])
+  const [Add, setAdd] = useState(1)
   const allproducts = useSelector(state => state.products)
   const dispacht = useDispatch()
   const { id } = useParams()
@@ -39,38 +41,49 @@ const ProductDetail = () => {
   }
 
 
+const addProducts = ()=>{
+ 
 
+  const product= {
+    id:ProductsDetail.id,
+    quantity:Add
+
+  }
+  dispacht(addProductsthunk(product))
+console.log(product)
+}
 
 
 
  
   return (
-    <div className='container-detail' style={{ maxHeight: '650px' }} >
+    <div className='container' style={{ maxHeight: '650px' }} >
       <div className="container">
         <div className="row">
-          <div className="col-12   col-sm-6  col-md-6  ">
+          <div className="col-12   col-sm-6  col-md-6"
+          style={{ maxHeight: '650px' }}>
             <Carousel activeIndex={index} onSelect={handleSelect}>
-              <Carousel.Item className= "image-product" >
+              <Carousel.Item >
                 <img
-                  style={{ maxHeight: '350px' }}
-                  className=".d-block w-150 image-product"
+                style={{ maxHeight: '650px' }}
+                class="img-thumbnail"
                   src={ProductsDetail?.productImgs?.[0]}
 
                 />
 
               </Carousel.Item>
-              <Carousel.Item className= "image-product" >
+              <Carousel.Item  >
                 <img
-                  style={{ maxHeight: '350px' }}
-                  className="d-block w-150"
+      style={{ maxHeight: '650px' }}
+      class="img-thumbnail"
                   src={ProductsDetail?.productImgs?.[1]}
                 />
 
               </Carousel.Item>
-              <Carousel.Item className= "image-product" >
+              <Carousel.Item >
                 <img
-                  style={{ maxHeight: '350px' }}
-                  className="d-block w-150"
+               style={{ maxHeight: '650px' }}
+                 class="img-thumbnail"
                   src={ProductsDetail?.productImgs?.[2]}
                 />
               </Carousel.Item>
@@ -81,36 +94,51 @@ const ProductDetail = () => {
           <div className="col-12 border col-sm-6 border col-md-6 boder mt-5 rounded ">
             <div>Most sale</div>
             <h1>{ProductsDetail?.title}</h1>
-            <h2>${ProductsDetail?.price}</h2>
-            <h3>free shipping</h3>
-          </div>
+            
+      <div className='container mt-5'>
+        <ListGroup>
+          <ListGroup.Item> <p>{ProductsDetail?.description}</p> </ListGroup.Item>
+        </ListGroup>
 
+       
+      </div>
+            <h2>${ProductsDetail?.price}</h2>
+
+            <Form onSubmit={addProducts}>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Cantidad</Form.Label>
+        <Form.Control 
+        type="number"
+        placeholder="cantidad"
+        value={Add}
+        onChange={e=> setAdd(e.target.value)}
+         />
+              </Form.Group>
+      <Button variant="primary" type="submit">
+      <i class="fa-solid fa-cart-plus"></i>
+      </Button>
+    </Form>
+            </div>
 
         </div>
       </div>
 
-      <div className='container mt-5'>
-        <ListGroup>
-          <ListGroup.Item>{ProductsDetail?.description}</ListGroup.Item>
-        </ListGroup>
-
-      </div>
-        <h2>SuggestedProducts</h2>
+ 
 <div className='container'>
 <div className='card-similar'>
         {
     SuggestedProducts.map(products => (
   
-          <div className="container-similar" 
+          <div className="container-similar "  
           onClick={()=> navigate(  `/Products/${products.id}`)}
           >
            
-        <img  style={{ maxHeight: '250px' }} src={products?.productImgs?.[0]} alt="" />
+        <img  class="img-thumbnail"  src={products?.productImgs?.[0]} alt="" />
 
 <div className='contaner-text'>
   <h6>{products.title}</h6>
    <h2>${products.price}</h2>
-   <h5>free shipping</h5>
+
 </div>
 
 

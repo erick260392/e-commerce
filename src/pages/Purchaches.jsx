@@ -9,6 +9,8 @@ const Purchaches = () => {
   const purchases = useSelector(state => state.purchases)
 
   console.log(purchases);
+
+
   useEffect(() => {
 
     dispacht(getPurchasesthunk())
@@ -16,37 +18,54 @@ const Purchaches = () => {
   }, [])
 
 
+  let ActualDate = new Date();
+  let Day = ActualDate.getDate();
+
+  const month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+
+
 
   return (
-    <div className='card'>
+    <div >
 
 
       {
         purchases.map(product => (
-          <div className='container-order'>
-            <button className='btn-order'>Number Order:{product.cart.id}</button>
-            <div className='container-order' >
-              <ul>
-                <div className='container'>
-                  <li>{product.cart.products?.[0]?.title}</li>
-                     <h6>description:{product.cart.products?.[0]?.description}</h6>
-                     <h3>price: {product.cart.products?.[0]?.price}</h3>
-                </div>
-                <div className='container'>
 
-                  <li>{product.cart.products?.[1]?.title}</li>
-                  <h6>description:{product.cart.products?.[1]?.description}</h6>
-                  <h3>price: {product.cart.products?.[1]?.price}</h3>
-                </div>
-                <div className='container'>
-
-                  <li>{product.cart.products?.[2]?.title}</li>
-                  <h6>description:{product.cart.products?.[2]?.description}</h6>
-                  <h3>price: {product.cart.products?.[2]?.price}</h3>
-                </div>
-              </ul>
-            </div>
+          <><div className='card'>
+            {` ${Day}-${month[ActualDate.getMonth()]}-${ActualDate.getFullYear()}`}
           </div>
+
+
+            <div className='card'>
+              {product.cart.products.map(product => (
+                <div className='info-card'>
+
+                  <><div className='container'>
+                    <h3>{product.title}</h3>
+
+                  </div>
+                    <div className='container'>
+
+                      <h4>${product.price}</h4>
+                    </div>
+                    <div className='container'>
+
+                      <h5> cant:{product.productsInCart.quantity}</h5>
+
+                    </div></>
+                </div>
+
+
+
+
+              ))}
+
+            </div></>
+
+
+
+
         ))
       }
 

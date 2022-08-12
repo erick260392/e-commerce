@@ -39,8 +39,13 @@ body.dark{
 
 .btn_darkmode{
   display: flex;
+  border-radius: 12px;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-end;
   padding: 10px;
 }
 
+.btn_darkmode button{
+  border: 1px solid var(--bg-color);
+  border-radius: 12px;
+}

@@ -1,27 +1,22 @@
-.container-order{
-    display: flex;
-    flex-direction: column;
+:root {
+    --primary-color: #E8EFF0;
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color: #C5D1D8;
+    --bg-card-color: #A9B2C1;
+    --transition: color .5s, background-color .8s ease-in-out;
+    --border-radius: 0.4em;
+    --skills-bar-lenght: 0%;
+
+}
+
+.card{
     margin: 20px;
-    padding: 20px;
-    border: 1px solid;
-    border-radius: 12px;
+
+}
+
+.info-card{
+    display: flex;
+  
    
 }
 
-.container-order li{
-    list-style: none;
-    color:#C7AB86;
-}
-
-.btn-order{
-    background-color: #3185B1;
-    height: fit-content;
-    width: fit-content;
-    border-radius: 12px;
-}
-
-.container{
-    margin: 5px;
-    padding: 10px;
-   
-}

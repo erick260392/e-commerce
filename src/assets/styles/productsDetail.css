@@ -12,8 +12,8 @@
 
 .card-similar{
 display: flex;
+border: 1px solid var(--primary-color);
 border-radius: 12px;
-background-color:var(--primary-color);
 align-items: center;
 justify-content: center;
 height: fit-content;
@@ -36,10 +36,6 @@ width: fit-content;
 .container-similar{
     display: flex;
     flex-direction: column;
-    background-color: var(--bg-color);
-    border-radius: 12px;
-    height:400px;
-    width: 400px;
     margin: 20px;
     padding: 10px;
     align-self: center;
@@ -57,8 +53,7 @@ width: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
-    border-radius: 12px;
+
    
 }
 
@@ -71,11 +66,13 @@ justify-content: center;
     display: flex;
      margin: 10px;
     flex-wrap: wrap;
-    border: 1px solid #A9B2C1;
+
 }
 
-.carousel-inner{
-    background-color: var(--primary-color);
-    border-radius: 12px;
-    padding: 8px;
+.border h1,p{
+    color: var(--bg-card-color)
+}
+
+.container h2{
+    color: var(--bg-card-color);
 }

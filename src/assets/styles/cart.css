@@ -1,0 +1,36 @@
+    :root {
+        --primary-color:#E8EFF0;
+        --text-color: hsl(0, 0%, 31%);
+        --bg-color: #C5D1D8;
+        --bg-card-color: #A9B2C1;
+        --transition: color .5s, background-color .5s ease-in-out;
+        --border-radius: 0.4em;
+        --skills-bar-lenght: 0%;
+
+    }
+
+    ul li{
+        list-style: none;
+    }
+
+    .card-quantity{
+
+        border: 1px solid #E8EFF0;
+        padding: 5px;
+        width: fit-content;
+    }
+    .card-div{
+        border: 1px solid #E8EFF0;
+        margin: 10px;
+        width: 100%;
+    }
+
+    .card-total{
+        display: flex;
+      
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        height: 100px;
+        width: 250px;
+    }

@@ -108,12 +108,13 @@ const Home = () => {
                                 {currenProducts.map(product => (
 
                                     <Col>
-                                        <Card id="card-home" className='h-100' style={{ height: '550px' }} >
+                                        <Card id="card-home"  >
                                             <Carousel activeIndex={index} onSelect={handleSelect}>
                                                 <Carousel.Item>
                                                     <img
-                                                        style={{ maxHeight: '250px' }}
-                                                        className="d-block w-100"
+                                                    onClick={() => navigate(`/products/${product.id}`)}
+                                                    
+                                                        className="img-fluid "
                                                         src={product.productImgs[0]}
 
                                                     />
@@ -121,17 +122,19 @@ const Home = () => {
                                                     </Carousel.Caption>
                                                 </Carousel.Item>
                                                 <Carousel.Item>
-                                                    <img
-                                                        style={{ maxHeight: '250px' }}
-                                                        className="d-block w-100"
+                                                    <img    
+                                                    onClick={() => navigate(`/products/${product.id}`)}
+                                                     
+                                                        className="img-fluid q"
                                                         src={product.productImgs[1]}
 
                                                     />
                                                 </Carousel.Item>
                                                 <Carousel.Item>
                                                     <img
-                                                        style={{ maxHeight: '250px' }}
-                                                        className="d-block w-100"
+                                                    onClick={() => navigate(`/products/${product.id}`)}
+                                                      
+                                                        className="img-fluid "
                                                         src={product.productImgs[2]}
 
                                                     />
@@ -142,7 +145,7 @@ const Home = () => {
                                                 <Card.Text>
                                                     <h2 className='text-price'>${product.price}</h2>
                                                 </Card.Text>
-                                                <button className='btn-home' onClick={() => navigate(`/products/${product.id}`)} >PRODUCT DETAIL</button>
+                                               
                                             </Card.Body>
                                         </Card>
                                     </Col>
@@ -152,13 +155,14 @@ const Home = () => {
                                 <Row xs={1} md={2} lg={3} className="g-4">
                                     {products.map(product => (
                                         <Col>
-                                            <Card className='h-100' style={{ height: '550px' }}
+                                            <Card 
                                             >
                                               <Carousel activeIndex={index} onSelect={handleSelect}>
                                                 <Carousel.Item>
                                                     <img
-                                                        style={{ maxHeight: '250px' }}
-                                                        className="d-block w-100"
+                                                    onClick={() => navigate(`/products/${product.id}`)}
+                                                     
+                                                        className="img-fluid "
                                                         src={product.productImgs[0]}
 
                                                     />
@@ -167,16 +171,18 @@ const Home = () => {
                                                 </Carousel.Item>
                                                 <Carousel.Item>
                                                     <img
-                                                        style={{ maxHeight: '250px' }}
-                                                        className="d-block w-100"
+                                                    onClick={() => navigate(`/products/${product.id}`)}
+                                                     
+                                                        className="img-fluid "
                                                         src={product.productImgs[1]}
 
                                                     />
                                                 </Carousel.Item>
                                                 <Carousel.Item>
                                                     <img
-                                                        style={{ maxHeight: '250px' }}
-                                                        className="d-block w-100"
+                                                    onClick={() => navigate(`/products/${product.id}`)}
+                                                     
+                                                        className="img-fluid "
                                                         src={product.productImgs[2]}
 
                                                     />
@@ -187,7 +193,7 @@ const Home = () => {
                                                     <Card.Text>
                                                         <h1 className='text-price'>${product.price}</h1>
                                                     </Card.Text>
-                                                    <button className='btn-home' onClick={() => navigate(`/products/${product.id}`)} >PRODUCT DETAIL</button>
+                                                
                                                 </Card.Body>
                                             </Card>
                                         </Col>
