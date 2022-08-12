@@ -113,8 +113,8 @@ const Home = () => {
                                                 <Carousel.Item>
                                                     <img
                                                     onClick={() => navigate(`/products/${product.id}`)}
-                                                    
-                                                        className="img-fluid "
+                                                    style={{ maxHeight: '350px' }}
+                                                    class="img-thumbnail rounded mx-auto d-block"
                                                         src={product.productImgs[0]}
 
                                                     />
@@ -124,8 +124,8 @@ const Home = () => {
                                                 <Carousel.Item>
                                                     <img    
                                                     onClick={() => navigate(`/products/${product.id}`)}
-                                                     
-                                                        className="img-fluid q"
+                                                    style={{ maxHeight: '350px' }}
+                                                    class="img-thumbnail rounded mx-auto d-block"
                                                         src={product.productImgs[1]}
 
                                                     />
@@ -133,8 +133,8 @@ const Home = () => {
                                                 <Carousel.Item>
                                                     <img
                                                     onClick={() => navigate(`/products/${product.id}`)}
-                                                      
-                                                        className="img-fluid "
+                                                    style={{ maxHeight: '350px' }}
+                                                    class="img-thumbnail rounded mx-auto d-block"
                                                         src={product.productImgs[2]}
 
                                                     />
@@ -161,8 +161,8 @@ const Home = () => {
                                                 <Carousel.Item>
                                                     <img
                                                     onClick={() => navigate(`/products/${product.id}`)}
-                                                     
-                                                        className="img-fluid "
+                                                    style={{ maxHeight: '350px' }}
+                                                    class="img-thumbnail rounded mx-auto d-block"
                                                         src={product.productImgs[0]}
 
                                                     />
@@ -172,8 +172,8 @@ const Home = () => {
                                                 <Carousel.Item>
                                                     <img
                                                     onClick={() => navigate(`/products/${product.id}`)}
-                                                     
-                                                        className="img-fluid "
+                                                    style={{ maxHeight: '350px' }}
+                                                    class="img-thumbnail rounded mx-auto d-block"
                                                         src={product.productImgs[1]}
 
                                                     />
@@ -181,8 +181,8 @@ const Home = () => {
                                                 <Carousel.Item>
                                                     <img
                                                     onClick={() => navigate(`/products/${product.id}`)}
-                                                     
-                                                        className="img-fluid "
+                                                    style={{ maxHeight: '350px' }}
+                                                    class="img-thumbnail rounded mx-auto d-block"
                                                         src={product.productImgs[2]}
 
                                                     />

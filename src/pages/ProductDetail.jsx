@@ -57,7 +57,7 @@ console.log(product)
 
  
   return (
-    <div className='container' style={{ maxHeight: '650px' }} >
+    <div className='container' style={{ height: '750px' }} >
       <div className="container">
         <div className="row">
           <div className="col-12   col-sm-6  col-md-6"
@@ -65,8 +65,8 @@ console.log(product)
             <Carousel activeIndex={index} onSelect={handleSelect}>
               <Carousel.Item >
                 <img
-                style={{ maxHeight: '650px' }}
-                class="img-thumbnail"
+                style={{ maxHeight: '550px' }}
+                class="img-thumbnail rounded mx-auto d-block"
                   src={ProductsDetail?.productImgs?.[0]}
 
                 />
@@ -74,16 +74,16 @@ console.log(product)
               </Carousel.Item>
               <Carousel.Item  >
                 <img
-      style={{ maxHeight: '650px' }}
-      class="img-thumbnail"
+        style={{ maxHeight: '550px' }}
+        class="img-thumbnail rounded mx-auto d-block"
                   src={ProductsDetail?.productImgs?.[1]}
                 />
 
               </Carousel.Item>
               <Carousel.Item >
                 <img
-               style={{ maxHeight: '650px' }}
-                 class="img-thumbnail"
+               style={{ maxHeight: '550px' }}
+               class="img-thumbnail rounded mx-auto d-block"
                   src={ProductsDetail?.productImgs?.[2]}
                 />
               </Carousel.Item>
@@ -108,13 +108,15 @@ console.log(product)
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Cantidad</Form.Label>
         <Form.Control 
+        id="form-quantity"
         type="number"
         placeholder="cantidad"
         value={Add}
         onChange={e=> setAdd(e.target.value)}
          />
               </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button className='btn-cart'
+       variant="primary" type="submit">
       <i class="fa-solid fa-cart-plus"></i>
       </Button>
     </Form>
@@ -124,16 +126,18 @@ console.log(product)
       </div>
 
  
-<div className='container'>
+<div className='container mt-5'  >
 <div className='card-similar'>
         {
     SuggestedProducts.map(products => (
   
           <div className="container-similar "  
-          onClick={()=> navigate(  `/Products/${products.id}`)}
+          onClick={()=> navigate( `/Products/${products.id}`)}
           >
            
-        <img  class="img-thumbnail"  src={products?.productImgs?.[0]} alt="" />
+        <img  
+        style={{ maxHeight: '550px' }}
+        class="img-thumbnail rounded mx-auto d-block"  src={products?.productImgs?.[0]} alt="" />
 
 <div className='contaner-text'>
   <h6>{products.title}</h6>

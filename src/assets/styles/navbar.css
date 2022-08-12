@@ -1,0 +1,13 @@
+#btn-log {
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#btn-cart{
+    margin-left: 5px;
+    display: flex;
+    width: 30px;
+    justify-content: center;
+}

@@ -3,6 +3,7 @@ import { Navbar,Container,Nav,Button} from 'react-bootstrap';
 import  {  useState } from 'react';
 import { useNavigate } from 'react-router';
 import Car from './Car';
+import '../assets/styles/navbar.css'
 
 const NavBar = () => {
 
@@ -33,10 +34,10 @@ const logout = () => {
                         <Nav.Link href="/#/Purchaches">Puchaches</Nav.Link>
               <Nav.Link href="/#/login">Login</Nav.Link>
               {token !== "" ?
-                <Nav.Link as={Button} onClick={logout} >Log out</Nav.Link> :
+                <Nav.Link id='btn-log' as={Button} onClick={logout} >Log out</Nav.Link> :
                 <Nav.Link></Nav.Link>}
               
-                <Nav.Link as={Button} onClick={handleShow}  ><i class="fa-solid fa-cart-shopping"></i></Nav.Link>
+                <Nav.Link id="btn-cart" as={Button} onClick={handleShow}  ><i class="fa-solid fa-cart-shopping"></i></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
