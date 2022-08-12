@@ -24,7 +24,6 @@ const Purchaches = () => {
   const month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
 
-
   return (
     <div >
 
@@ -55,17 +54,8 @@ const Purchaches = () => {
 
                     </div></>
                 </div>
-
-
-
-
               ))}
-
             </div></>
-
-
-
-
         ))
       }
 
